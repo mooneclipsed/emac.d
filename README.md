@@ -1,0 +1,2 @@
+# emac.d
+learning emacs.
