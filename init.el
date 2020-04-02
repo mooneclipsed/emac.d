@@ -85,7 +85,7 @@
 
 ;; 关闭文件滑动控件
 (scroll-bar-mode -1)
-
+;;停止生成副本
 (setq make-backup-files nil)
 ;; 显示行号
 (global-linum-mode 1)
