@@ -87,6 +87,7 @@
 (scroll-bar-mode -1)
 ;;停止生成副本
 (setq make-backup-files nil)
+(setq auto-save-default nil)
 ;; 显示行号
 (global-linum-mode 1)
 ;;setq modify local
