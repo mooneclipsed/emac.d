@@ -53,9 +53,10 @@
 (require 'hungry-delete)
 (global-hungry-delete-mode)
 
+(delete-selection-mode t)
 
 ;;smartparens
-(require 'smartparens-config)
+;;(require 'smartparens-config)
 ;;(add-hook 'emacs-lisp-mode-hook #'smartparens-mode)
 (smartparens-global-mode t)
 
@@ -66,6 +67,9 @@
        auto-mode-alist))
 
 
+(setq enable-recursive-minibuffers t)
+;; enable this if you want `swiper' to use it
+;; (setq search-default-mode #'char-fold-to-regexp)
 ;;swiper
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
