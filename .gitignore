@@ -1,4 +1,7 @@
 *.[oa]
 auto-save-list
-
+.cask
+elpa
+anaconda-mode
+company-statistics-cache.el
 *~

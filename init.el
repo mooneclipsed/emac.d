@@ -18,6 +18,7 @@
 		swiper
 		counsel
 		smartparens
+		popwin
 		;; --- Major Mode ---
 		js2-mode
 		;; --- Minor Mode ---
@@ -109,6 +110,8 @@
 ;; http://stackoverflow.com/questions/294664/how-to-set-the-font-size-in-emacs
 (set-face-attribute 'default nil :height 100)
 
+(require 'popwin)
+(popwin-mode t)
 
 
 (require 'recentf)
