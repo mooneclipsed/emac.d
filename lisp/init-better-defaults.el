@@ -5,7 +5,7 @@
 (global-hl-line-mode t)
 
 ;;define the liudongdesuiyue in 8ly
-(abbrev-mode t)
+(setq-default abbrev-mode t)
 (define-abbrev-table 'global-abbrev-table'(
                                           ;; signature
                                           ("8ly" "liudongdesuiyue")
@@ -59,8 +59,6 @@
 (setq dired-recursive-copies 'always)
 
 (put 'dired-find-alternate-file 'disabled nil)
-
-
 
 
 (provide 'init-better-defaults)
