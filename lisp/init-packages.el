@@ -21,6 +21,7 @@
 		counsel
 		smartparens
 		popwin
+		reveal-in-osx-finder
 		;; --- Major Mode ---
 		js2-mode
 		;; --- Minor Mode ---

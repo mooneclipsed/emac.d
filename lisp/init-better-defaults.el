@@ -40,6 +40,8 @@
 	(indent-buffer)
 	(message "Indented buffer.")))))
 
+
+
 (setq hippie-expand-try-function-list '(try-expand-dabbrev
 					try-expand-dabbrev-all-buffer
 					try-expand-dabbrev-from-kill
@@ -50,6 +52,15 @@
 					try-expand-line
 					try-complete-lisp-symbol-partially
 					try-complete-lisp-symbol))
+
+(fset 'yes-or-no-p 'y-or-n-p)
+
+(setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
+
+(put 'dired-find-alternate-file 'disabled nil)
+
+
 
 
 (provide 'init-better-defaults)
