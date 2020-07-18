@@ -19,8 +19,7 @@
 (require 'init-keybindings)
 (require 'init-org)
 (require 'dired-x)
-(with-eval-after-load 'dired
-  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+
 
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))

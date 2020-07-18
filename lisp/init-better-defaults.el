@@ -22,6 +22,13 @@
 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "Highlighting enclosing parens"
+  (cond ((looking-at-p "\\s(") (funcall fn))
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     (funcall fn)))))
+
 
 (defun indent-buffer ()
   "Indent the currently visited buffer."
@@ -60,6 +67,13 @@
 
 (put 'dired-find-alternate-file 'disabled nil)
 
+(setq dired-dwim-target t)
+
+(defun remove-dos-eol()
+  "Replace DOS enlns CR LF with Unix enlns CR"
+  (interactive)
+  (goto-char (point-min))
+  (while (search-forward "\r" nil t) (replace-match "")))
 
 (provide 'init-better-defaults)
 

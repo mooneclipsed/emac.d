@@ -24,6 +24,7 @@
 		reveal-in-osx-finder
 		;; --- Major Mode ---
 		js2-mode
+		web-mode
 		;; --- Minor Mode ---
 		nodejs-repl
 		exec-path-from-shell
@@ -60,12 +61,17 @@
 ;;(require 'smartparens-config)
 ;;(add-hook 'emacs-lisp-mode-hook #'smartparens-mode)
 (smartparens-global-mode t)
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
 ;;config for js2-mode
 (setq auto-mode-alist
       (append
-       '(("\\.js\\'" . js2-mode))
+       '(("\\.js\\'" . js2-mode)
+	 ("\\.html\\'" . web-mode)
+	 ("\\.rkt\\'" . scheme-mode))
        auto-mode-alist))
+
+
 
 
 (setq enable-recursive-minibuffers t)
