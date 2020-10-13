@@ -28,6 +28,7 @@
 		;; --- Minor Mode ---
 		nodejs-repl
 		exec-path-from-shell
+		js2-refactor
 		;; --- Themes ---
 		monokai-theme
 		;; solarized-theme
@@ -82,6 +83,19 @@
 (setq ivy-use-virtual-buffers t)
 
 (global-company-mode t)
+
+;; config for web mode
+(defun my-web-mode-indent-setup()
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  )
+
+(add-hook 'web-mode-hook 'my-web-mode-indent-setup)
+
+;; config for js2-refactor
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+(js2r-add-keybindings-with-prefix "C-c C-m")
 
 (load-theme 'monokai t)
 
