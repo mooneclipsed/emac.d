@@ -1,0 +1,11 @@
+* 工作安排
+
+** TODO [#B] Done Spacemacs Rocks six
+   SCHEDULED: <2021-02-15 Mon 19:30>
+   :LOGBOOK:
+   CLOCK: [2021-02-15 Mon 17:33]
+   :END:
+
+** TODO [#B] Done the leetcode exercise
+   SCHEDULED: <2021-02-15 Mon 20:00>
+

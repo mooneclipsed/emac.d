@@ -26,8 +26,3 @@
 
 
 ;;(load-file custom-file)
-
-
-
-
-

@@ -49,6 +49,7 @@
 
 
 
+
 (setq hippie-expand-try-function-list '(try-expand-dabbrev
 					try-expand-dabbrev-all-buffer
 					try-expand-dabbrev-from-kill
@@ -75,5 +76,22 @@
   (goto-char (point-min))
   (while (search-forward "\r" nil t) (replace-match "")))
 
-(provide 'init-better-defaults)
+;; dwin = do what i mean.
+(defun occur-dwim ()
+  "Call `occur' with a sane default."
+  (interactive)
+  (push (if (region-active-p)
+	    (buffer-substring-no-properties
+	     (region-beginning)
+	     (region-end))
+	  (let ((sym (thing-at-point 'symbol)))
+	    (when (stringp sym)
+	      (regexp-quote sym))))
+	regexp-history)
+  (call-interactively 'occur))
+(global-set-key (kbd "M-s o") 'occur-dwim)
 
+
+(set-language-environment "UTF-8")
+
+(provide 'init-better-defaults)
