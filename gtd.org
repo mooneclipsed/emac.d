@@ -3,9 +3,18 @@
 ** TODO [#B] Done Spacemacs Rocks six
    SCHEDULED: <2021-02-15 Mon 19:30>
    :LOGBOOK:
-   CLOCK: [2021-02-15 Mon 17:33]
+   CLOCK: [2021-02-15 Mon 17:33]--[2021-02-15 Mon 17:58] =>  0:25
    :END:
 
 ** TODO [#B] Done the leetcode exercise
-   SCHEDULED: <2021-02-15 Mon 20:00>
+   SCHEDULED: <2021-02-15 Mon 09:00>
+
+** TODO [#B] Start cup of challege
+   SCHEDULED: <2021-02-19 Fri 14:00>
+   :LOGBOOK:
+   CLOCK: [2021-02-19 Fri 14:45]
+   :END:
+
+** TODO [#B] join in the group seminar
+   SCHEDULED: <2021-02-19 Fri 19:00>
 
