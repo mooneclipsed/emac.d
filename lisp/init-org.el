@@ -9,8 +9,6 @@
 	 "* TODO [#B] %?\n  %i\n"
 	 :empty-lines 1)))
 
-
-
 (add-hook 'org-mode-hook
 	  (lambda()
 	    (setq truncate-lines nil)))

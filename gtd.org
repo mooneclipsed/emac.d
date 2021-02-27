@@ -12,7 +12,7 @@
 ** TODO [#B] Start cup of challege
    SCHEDULED: <2021-02-19 Fri 14:00>
    :LOGBOOK:
-   CLOCK: [2021-02-19 Fri 14:45]
+   CLOCK: [2021-02-19 Fri 14:45]--[2021-02-19 Fri 15:10] =>  0:25
    :END:
 
 ** TODO [#B] join in the group seminar

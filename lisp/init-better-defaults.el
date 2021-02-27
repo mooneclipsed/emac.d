@@ -2,7 +2,7 @@
 
 (global-auto-revert-mode t)
 
-(global-hl-line-mode t)
+;;(global-hl-line-mode nit)
 
 ;;define the liudongdesuiyue in 8ly
 (setq-default abbrev-mode t)
@@ -89,7 +89,7 @@
 	      (regexp-quote sym))))
 	regexp-history)
   (call-interactively 'occur))
-(global-set-key (kbd "M-s o") 'occur-dwim)
+
 
 
 (set-language-environment "UTF-8")
@@ -113,7 +113,6 @@
 		      "copy theResult to the end of links\n"
 		      "return links as string\n"))))
 	(format "%s" (s-chop-suffix "\"" (s-chop-prefix "\"" result)))))
-
 
 
 (provide 'init-better-defaults)

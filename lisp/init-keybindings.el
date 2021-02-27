@@ -24,8 +24,26 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c r") 'org-capture)
 
+(global-set-key (kbd "M-s i") 'counsel-imenu)
+
+(global-set-key (kbd "M-s e") 'iedit-mode)
+
+(global-set-key (kbd "C-=") 'er/expand-region)
+;; helm-ag
+(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
+
+;;查找
+(global-set-key (kbd "M-s o") 'occur-dwim)
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+
+(with-eval-after-load 'company
+  ;; Company 模式相关设定
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+  (define-key company-active-map (kbd "C-p") #'company-select-previous)
+  )
 
 (provide 'init-keybindings)
 

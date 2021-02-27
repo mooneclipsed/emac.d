@@ -25,6 +25,7 @@
 		expand-region
 		iedit
 		org-pomodoro
+		flycheck
 		;; --- Major Mode ---
 		js2-mode
 		web-mode
@@ -32,6 +33,7 @@
 		nodejs-repl
 		exec-path-from-shell
 		js2-refactor
+		helm-ag
 		;; --- Themes ---
 		monokai-theme
 		;; solarized-theme
@@ -126,9 +128,8 @@
 (require 'popwin)
 (popwin-mode t)
 
-(global-set-key (kbd "M-s i") 'counsel-imenu)
-(global-set-key (kbd "C-=") 'er/expand-region)
+(require 'org-pomodoro)
 
-
+(add-hook 'js2-mode-hook 'flycheck-mode)
 
 (provide 'init-packages)
