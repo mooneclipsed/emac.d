@@ -17,4 +17,5 @@
 
 ** TODO [#B] join in the group seminar
    SCHEDULED: <2021-02-19 Fri 19:00>
-
+** TODO [#B] Recite 30 words
+   SCHEDULED: <2021-03-24 Wed 17:00>

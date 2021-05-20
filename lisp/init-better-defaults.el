@@ -12,6 +12,9 @@
                                            ;; eamcs regex
 					  ))
 
+(setq c-basic-offset 4)
+(setq c-default-style "linux")
+
 ;;停止生成副本
 (setq make-backup-files nil)
 

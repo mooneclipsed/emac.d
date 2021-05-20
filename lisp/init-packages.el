@@ -26,6 +26,8 @@
 		iedit
 		org-pomodoro
 		flycheck
+		auto-yasnippet
+		yasnippet-snippets
 		;; --- Major Mode ---
 		js2-mode
 		web-mode
@@ -34,6 +36,7 @@
 		exec-path-from-shell
 		js2-refactor
 		helm-ag
+		irony
 		;; --- Themes ---
 		monokai-theme
 		;; solarized-theme
@@ -67,7 +70,8 @@
 ;;(require 'smartparens-config)
 ;;(add-hook 'emacs-lisp-mode-hook #'smartparens-mode)
 (smartparens-global-mode t)
-(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+(with-eval-after-load 'emacs-lisp-mode
+  (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil))
 
 ;;config for js2-mode
 (setq auto-mode-alist
@@ -125,11 +129,21 @@
 	      (lambda ()
 		(setq imenu-create-index-function 'js2-imenu-make-index)))
 
+(require 'yasnippet)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+
+(global-set-key (kbd "H-w") #'aya-create)
+(global-set-key (kbd "H-y") #'aya-expand)
+
 (require 'popwin)
 (popwin-mode t)
 
 (require 'org-pomodoro)
 
 (add-hook 'js2-mode-hook 'flycheck-mode)
+(add-hook 'c++-mode-hook 'flycheck-mode)
 
 (provide 'init-packages)
+
+
